@@ -1,0 +1,28 @@
+{
+  "name": "js-tasks",
+  "version": "1.0.0",
+  "description": "js tasks",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./src/tasks/index.js",
+    "lint": "eslint ./**/*.js",
+    "prepush": "npm run lint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SozonikOleg/JS-Tasks.git"
+  },
+  "author": "Sozonik Oleg",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SozonikOleg/JS-Tasks/issues"
+  },
+  "homepage": "https://github.com/SozonikOleg/JS-Tasks#readme",
+  "devDependencies": {
+    "eslint": "^5.3.0",
+    "eslint-config-airbnb": "^17.1.1",
+    "eslint-plugin-import": "^2.18.0",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.14.2"
+  }
+}
