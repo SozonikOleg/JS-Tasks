@@ -58,7 +58,48 @@ const getArrayTasks = () => {
   }
   console.log('task 5:', sum);
 
-  /** 6)
+  /** 6)  Create an array of strings. Create a string on the basis of this array.
+ * 1.    This string should contain all elements from an array separated by certain delimeter.
+ */
+  const arr6 = ['Oleg', 'Inna', 'Mathew', 'Vera'];
+  const arr6$ = arr6.join('-');
+  console.log('task 6:', arr6$);
+
+  /** 7) Create an array of numbers in the range from 1 to 20 in random order.
+ * 1. Sort this array in ascending order. Display it in the console.
+ * 2.   Create a copy of the previous array in reverse order. Disply it in the console.
+ */
+  const arr7 = [10, 1, 2, 4, 5, 6, 7, 19, 9, 3, 0, 10, 11, 12, 13, 15, 14, 16, 17, 18, 8, 19, 20];
+  arr7.sort((a, b) => a - b);
+  console.log('task 7:', arr7);
+
+  /** 8) Create the array: [3, 0, -1, 12, -2, -4, 0, 7, 2]
+ * 1. Use this array and create new one: [-1, -2, -4, 0, 0, 3, 12, 7, 2].
+ * 2. First part - negative values from the original array in the same order,
+ * 3. Next part - zeroes
+ * 4. Last part - positive values from the original array in the same order.
+ */
+  const arr8 = [3, 0, -1, 12, -2, -4, 0, 7, 2];
+  const arrPart1 = arr8.filter(a => a < 0);
+  const arrPart2 = arr8.filter(a => a === 0);
+  const arrPart3 = arr8.filter(a => a > 0);
+  const result = arrPart1.concat(arrPart2).concat(arrPart3);
+  console.log('task 8:', result);
+
+  /** 9) Calculate the number of letters r, k, t in this string
+ * 1. "dskjdhfkjshdfkjhsdkjureyteiruyiqywehjkh" and display them in the console.
+ */
+  const str9 = 'dskjdhfkjshdfkjhsdkjureyteiruyiqywehjkh';
+  const arr9 = str9.split('');
+  const obj9 = arr9.reduce((sum, item) => {
+    if (item === 'k' || item === 'r' || item === 't') {
+      sum[item] ? sum[item] += 1 : sum[item] = 1;
+    }
+    return sum;
+  }, {});
+  console.log('task 9:', obj9);
+
+  /** 7)
 * const arr = [
 *  { id: 1, name: 'Name1' },
 *  { id: 1, name: 'Name3' },
@@ -92,7 +133,7 @@ const getArrayTasks = () => {
     return obj;
   }
 
-  console.log('task 6:', get(arr));
+  console.log('task 10:', get(arr));
 
 
   const a = arr.reduce((acc, item) => {
@@ -102,6 +143,7 @@ const getArrayTasks = () => {
     return acc;
   }, {});
 
-  console.log('task 6:', a);
+  console.log('task 10:', a);
+  console.log('');
 };
 module.exports = getArrayTasks;
