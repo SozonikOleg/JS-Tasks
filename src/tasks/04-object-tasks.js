@@ -119,6 +119,7 @@ const getObjectTasks = () => {
   }
   const obj5 = new Person();
   console.log('task 5:', obj5);
+  console.log('');
 };
 
 module.exports = getObjectTasks;
