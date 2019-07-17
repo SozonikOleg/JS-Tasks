@@ -99,7 +99,7 @@ const getArrayTasks = () => {
   }, {});
   console.log('task 9:', obj9);
 
-  /** 7)
+  /** 10)
 * const arr = [
 *  { id: 1, name: 'Name1' },
 *  { id: 1, name: 'Name3' },
@@ -144,6 +144,39 @@ const getArrayTasks = () => {
   }, {});
 
   console.log('task 10:', a);
+
+  // 11 Дан массив с числами. Создайте новый массив, состоящий из квадратов этих чисел
+  const arr11 = [1, 3, 4, 5, 6, 7, 8, 9, 0, 4, 3, 2];
+  const newArr11 = [];
+  arr11.forEach(item => newArr11.push(Math.pow(item, 2)));
+
+  console.log('task 11:', newArr11);
+
+  // 12 Дан массив с числами. Найдите сумму этих чисел.
+  const arr12 = [1, 3, 4, 5, 6, 7, 8, 9, 0, 4, 3, 2];
+  let result12 = 0;
+  arr12.forEach((item) => {
+    result12 += item;
+  });
+  console.log('task 12:', result12);
+
+
+  // 13 Дан массив с числами. Сделайте из него массив, состоящий из квадратов этих чисел.
+  const arr13 = [1, 3, 4, 5, 6, 7, 8, 9, 0, 4, 3, 2];
+  const newArray13 = arr13.map(i => Math.pow(i, 2));
+  console.log('task 13:', newArray13);
+
+  // 14 Дан массив с числами. Проверьте то, что все элементы в массиве больше нуля.
+  const arr14 = [1, 3, 4, 5, 6, 7, 8, 9, 0, 4, 3, 2];
+  const result14 = arr14.every(item => item > 0);
+  console.log('task 14:', result14);
+
+
+  // 15 Дан массив с числами. Проверьте то, что в нем есть отрицательные элементы.
+  const arr15 = [1, -3, 4, -5, 6, 7, 8, 9, 0, -4, 3, -2];
+  const result15 = arr15.some(item => item < -1);
+  console.log('task 15:', result15);
+
   console.log('');
 };
 module.exports = getArrayTasks;
