@@ -40,6 +40,28 @@ const getNumberTasks = () => {
     return [res1, res2, res3];
   }
   console.log('task 5:', getSqrtNumber(379));
+
+  // 6) Your task is to create a function
+  // that does four basic mathematical operations.
+
+  // The function should take three arguments - operation(string/char),
+  //  value1(number), value2(number).
+  // The function should return result of numbers after applying the chosen operation.
+
+  // basicOp('+', 4, 7); // Output: 11
+  // basicOp('-', 15, 18); // Output: -3
+  // basicOp('*', 5, 5); // Output: 25
+  // basicOp('/', 49, 7); // Output: 7
+
+  function basicOp(operation, value1, value2) {
+    const result = (operation === '+') ? value1 + value2
+      : (operation === '-') ? value1 - value2
+        : (operation === '/') ? value1 / value2 : value1 * value2;
+    return result;
+  }
+
+  console.log('task 6:', basicOp('/', 49, 7));
+
   console.log('');
 };
 
