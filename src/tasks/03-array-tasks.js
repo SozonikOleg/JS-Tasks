@@ -225,6 +225,70 @@ const getArrayTasks = () => {
 
   console.log('task 16:', revrot('733049910872815764', 5));
 
+  // 17 Дан массив с числами.
+  // Найдите сумму первых N элементов до первого нуля.
+
+  const arr17 = [1, 2, 3, 4, 0, 5, 4, 3, 2];
+  let result17 = 0;
+
+  arr17.reduce((sum17, item) => {
+    if (item === 0) {
+      result17 = sum17;
+    }
+    return sum17 + item;
+  }, 0);
+
+
+  console.log('task 17:', result17);
+
+  // 18 Дан массив с числами.
+  // Найдите сумму последних N элементов до первого нуля с конца.
+
+  const arr18 = [1, 2, 3, 4, 0, 5, 4, 3, 2];
+  let result18 = 0;
+
+  arr18.reduceRight((sum18, item) => {
+    if (item === 0) {
+      result18 = sum18;
+    }
+    return sum18 + item;
+  }, 0);
+
+  console.log('task 18:', result18);
+
+  // 19 Дан массив с числами.
+  // Узнайте сколько элементов с начала массива надо сложить,
+  // чтобы в сумме получилось больше 10-ти.
+
+  const arr19 = [1, 1, 1, 1, 1, 2, 4, 4, 0, 52, 4, 3, 2];
+  let result19 = 0;
+
+  arr19.reduce((sum19, item, i) => {
+    sum19 += item;
+    if (sum19 < 10) {
+      result19 = i + 2;
+    }
+    return sum19;
+  }, 0);
+
+  console.log('task 19:', result19);
+
+  // 20 Дан массив с числами.
+  // Узнайте сколько элементов с конца массива надо сложить,
+  // чтобы в сумме получилось больше 10-ти
+
+  const arr20 = [1, 1, 1, 1, 1, 2, 4, 4, 0, 52, 4, 3, 2];
+  let result20 = 0;
+
+  arr20.reduceRight((sum20, item20, i) => {
+    sum20 += item20;
+    if (sum20 < 10) {
+      result20 = arr20.length + 1 - i;
+    }
+    return sum20;
+  }, 0);
+
+  console.log('task 20:', result20);
 
   console.log('');
 };

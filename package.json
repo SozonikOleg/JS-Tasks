@@ -6,7 +6,8 @@
   "scripts": {
     "start": "node ./src/tasks/index.js",
     "lint": "eslint ./**/*.js",
-    "prepush": "npm run lint"
+    "prepush": "npm run lint",
+    "server":"node ./src/express.js"
   },
   "repository": {
     "type": "git",
@@ -24,5 +25,8 @@
     "eslint-plugin-import": "^2.18.0",
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-react": "^7.14.2"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
   }
 }
